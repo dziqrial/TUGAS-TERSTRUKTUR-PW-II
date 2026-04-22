@@ -1,0 +1,313 @@
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: white;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Background Glow dengan teknik Div yang kamu mau */
+.bg-glow-large {
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background: #b31515;
+    border-radius: 50%;
+    top: 50%;
+    right: 200px;
+    transform: translateY(-50%);
+    filter: blur(150px);
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* Navbar Style */
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    padding: 40px 10%;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin-left: 200px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    height: calc(100vh - 100px);
+}
+
+.hero-text h1 {
+    font-size: 80px;
+    letter-spacing: -2px;
+}
+
+/* Di file public/css/style.css */
+
+.statue-red {
+    /* 1. Ubah jadi hitam putih dulu agar warnanya netral */
+    filter: grayscale(100%) /* 2. Berikan warna dasar sepia (kecokelatan) */
+        sepia(100%) /* 3. Geser warnanya dari cokelat ke merah (hue-rotate) */
+        hue-rotate(320deg) /* 4. Naikkan saturasi agar merahnya menyala */
+        saturate(15)
+        /* 5. Sesuaikan kecerahan agar menyatu dengan background gelap */
+        brightness(0.7);
+
+    /* Tips Tambahan: Beri sedikit bayangan halus agar lebih dramatis */
+    /* drop-shadow(0 0 30px rgba(179, 21, 21, 0.3)); */
+
+    /* Pastikan ukurannya pas */
+    max-width: 100%;
+    height: auto;
+    display: block; /* Menghilangkan gap bawah */
+}
+
+.btn-more {
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: #f73131;
+    text-decoration: none;
+}
+
+/* =============================BUAT PAGES ABOUT========================= */
+
+/* About Section Layout */
+.about-section {
+    padding: 10px 10% 50px; /* Jarak atas lebih besar karena ada navbar absolute */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.about-container {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.about-header {
+    flex: 1;
+}
+
+.about-header h1 {
+    font-size: 70px;
+    line-height: 0.9;
+    margin-top: 20px;
+}
+
+.about-body {
+    flex: 1.2;
+}
+
+.about-body .highlight {
+    font-size: 24px;
+    color: #f73131; /* Merah aksen */
+    margin-bottom: 30px;
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.about-body p {
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+/* Skills List Styling */
+.skills h3 {
+    margin-top: 20px;
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+    list-style-type: disc;
+}
+
+.skills li {
+    margin-left: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+/* =====================================BUAT PAGES GALLERY============================== */
+.gallery-section {
+    padding: 150px 10% 100px;
+}
+
+.gallery-intro {
+    margin-bottom: 60px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dua kolom */
+    gap: 30px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    background: #1a1a1a;
+    aspect-ratio: 16 / 9;
+}
+
+.gallery-item.large {
+    grid-column: span 2; /* Item ketiga memanjang ke bawah atau ke samping */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) brightness(0.6); /* Awalnya hitam putih & gelap */
+    transition: 0.5s ease;
+}
+
+/* Efek saat di-hover */
+.gallery-item:hover img {
+    filter: grayscale(0%) brightness(0.8) sepia(100%) hue-rotate(320deg)
+        saturate(5);
+    transform: scale(1.05);
+}
+
+.item-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.item-info span {
+    color: #f73131;
+    font-weight: 900;
+    font-size: 12px;
+}
+
+.item-info h3 {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+/* =================================BUAT PAGES CONTACT================================ */
+.contact-section {
+    padding: 150px 10% 100px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.contact-container {
+    display: flex;
+    gap: 100px;
+    width: 100%;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.social-links {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #f73131;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    letter-spacing: 4px;
+    color: #fff;
+}
+
+/* Form Styling */
+.contact-form {
+    flex: 1;
+}
+
+.input-group {
+    margin-bottom: 30px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 10px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 10px 0;
+    color: #fff;
+    font-family: inherit;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-bottom: 1px solid #f73131;
+}
+
+.btn-send {
+    background: #f73131;
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-send:hover {
+    background: #fff;
+    color: #000;
+}
