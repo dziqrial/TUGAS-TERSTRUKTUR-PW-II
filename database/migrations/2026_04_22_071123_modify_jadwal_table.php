@@ -25,6 +25,8 @@ return new class extends Migration
         Schema::table('jadwal', function (Blueprint $table) {
             $table->dropForeign('jadwal_kode_matkul_foreign');
             $table->dropColumn('kode_matkul');
+            $table->dropForeign('jadwal_nidn_foreign');
+            $table->dropColumn('nidn');
         });
     }
 };
