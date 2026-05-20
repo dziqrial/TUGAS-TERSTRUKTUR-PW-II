@@ -6,7 +6,7 @@
         <div class= "card">
             <div class="card-header">Tambah Mahasiswa</div>
             <div class="card-body">
-                <form action="{{--route('mhs.update')--}}" method="POST">
+                <form action="{{route('mhs.update', $dataMhs->npm)}}" method="POST">
                     {{-- dibutuhkan laravel untuk mengirim data --}}
                     @csrf 
                     @method('put')

@@ -66,9 +66,19 @@ class MahasiswaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $npm)
     {
-        //
+        $validate = $request->validate([
+            'npm' => 'required|min:10|starts_with:55201|unique:mahasiswa,npm,' . $npm . ',npm',
+            'nidn_dosen' => 'required|min:10',
+            'nama' => 'required|min:1'
+        ]);
+
+        $mahasiswa = Mahasiswa::where('npm', $npm)->firstOrFail();
+
+        $mahasiswa->update($validate);
+
+        return redirect()->route('mhs.list')->with('success', 'Data berhasil diupdate');
     }
 
     /**

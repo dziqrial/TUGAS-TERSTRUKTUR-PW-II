@@ -13,6 +13,9 @@
                 <a class="nav-link active" aria-current="page" href="{{route('mhs.list')}}">Mahasiswa</a>
                 </li>
                 <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{route('dsn.list')}}">Dosen</a>
+                </li>
+                <li class="nav-item">
                 <a class="nav-link" href="#">Features</a>
                 </li>
                 <li class="nav-item">
