@@ -15,7 +15,7 @@ class Dosen extends Model
 
     public function mahasiswa()
     {
-        return $this->hasMany(Mahasiswa::class, 'nidn', 'nidn');
+        return $this->hasMany(Mahasiswa::class, 'nidn', 'nidn_dosen');
     }
 
     public function jadwal()

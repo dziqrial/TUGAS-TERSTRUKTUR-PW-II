@@ -15,16 +15,9 @@ class mahasiswaSeeder extends Seeder
     {
         $mahasiswa = [
             [
-                'npm' => '1234567890',
-                'nama' => 'bokir',
-                'nidn_dosen' => '1234567890',
-                'created_at' => now(),
-                'updated_at' => now()
-            ],
-            [
-                'npm' => '0987654321',
-                'nama' => 'andika',
-                'nidn_dosen' => '0987654321',
+                'npm' => '5520124050',
+                'nama' => 'Dziqri Al Ghifar',
+                'nidn_dosen' => '0409028007',
                 'created_at' => now(),
                 'updated_at' => now()
             ]

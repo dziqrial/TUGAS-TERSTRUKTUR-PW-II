@@ -17,19 +17,9 @@ class jadwalSeeder extends Seeder
             [
                 'id' => 1,
                 'kode_matkul' => 'MK001',
-                'nidn' => '1234567890',
-                'kelas' => 'A',
-                'hari' => 'Senin',
-                'jam' => now(),
-                'created_at' => now(),
-                'updated_at' => now()
-            ],
-            [
-                'id' => 2,
-                'kode_matkul' => 'MK002',
-                'nidn' => '0987654321',
+                'nidn' => '0409028007',
                 'kelas' => 'B',
-                'hari' => 'Rabu',
+                'hari' => 'Senin',
                 'jam' => now(),
                 'created_at' => now(),
                 'updated_at' => now()

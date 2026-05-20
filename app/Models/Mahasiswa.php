@@ -11,11 +11,11 @@ class Mahasiswa extends Model
     public $incrementing = false;
     protected $keyType = 'string';
 
-    protected $fillable = ['npm', 'nidn', 'nama'];
+    protected $fillable = ['npm', 'nidn_dosen', 'nama'];
 
     public function dosen()
     {
-        return $this->belongsTo(Dosen::class, 'nidn', 'nidn');
+        return $this->belongsTo(Dosen::class, 'nidn_dosen', 'nidn');
     }
 
     public function krs()

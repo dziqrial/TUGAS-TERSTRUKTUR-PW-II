@@ -7,5 +7,6 @@
         <li><a href="{{ route('about') }}">ABOUT</a></li>
         <li><a href="{{ route('gallery') }}">GALLERY</a></li>
         <li><a href="{{ route('contact') }}">CONTACTS</a></li>
+        <li><a href="{{ route('siak') }}">SIAK PROJECT</a></li>
     </ul>
 </nav>

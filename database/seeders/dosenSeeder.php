@@ -15,14 +15,8 @@ class dosenSeeder extends Seeder
     {
         $dosen = [
             [
-                'nidn' => '1234567890',
-                'nama' => 'Dr. bob johnson',
-                'created_at' => now(),
-                'updated_at' => now()
-            ],
-            [
-                'nidn' => '0987654321',
-                'nama' => 'Prof. Jane Smith',
+                'nidn' => '0409028007',
+                'nama' => 'M Dzikri AM S.T., M.T',
                 'created_at' => now(),
                 'updated_at' => now()
             ]

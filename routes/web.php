@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DesignController;
+use App\Http\Controllers\MahasiswaController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/welcome', function () {
@@ -43,3 +44,12 @@ Route::get('/', [DesignController::class, 'index'])->name('home');
 Route::get('/about', [DesignController::class, 'about'])->name('about');
 Route::get('/gallery', [DesignController::class, 'gallery'])->name('gallery');
 Route::get('/contact', [DesignController::class, 'contact'])->name('contact');
+Route::get('/siak', [DesignController::class, 'siak'])->name('siak');
+
+
+//SIAK
+//Mahasiswa
+Route::get('/mahasiswa/list', [MahasiswaController::class, 'index'])->name('mhs.list');
+Route::get('/mahasiswa/create', [MahasiswaController::class, 'create'])->name('mhs.create');
+Route::post('/mahasiswa/store', [MahasiswaController::class, 'store'])->name('mhs.store');
+Route::get('/mahasiswa/{npm}/edit', [MahasiswaController::class, 'edit'])->name('mhs.edit');

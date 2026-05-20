@@ -15,14 +15,8 @@ class krsSeeder extends Seeder
     {
         $krs = [
             [
-                'npm' => '1234567890',
+                'npm' => '5520124050',
                 'kode_matkul' => 'MK001',
-                'created_at' => now(),
-                'updated_at' => now()
-            ],
-            [
-                'npm' => '0987654321',
-                'kode_matkul' => 'MK002',
                 'created_at' => now(),
                 'updated_at' => now()
             ]

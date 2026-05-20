@@ -22,4 +22,8 @@ class DesignController extends Controller
     {
         return view('pages.contact');
     }
+    public function siak()
+    {
+        return view('pages.siak_project.indexsiak');
+    }
 }

@@ -20,13 +20,6 @@ class matakuliahSeeder extends Seeder
                 'sks' => 3,
                 'created_at' => now(),
                 'updated_at' => now()
-            ],
-            [
-                'kode_matakuliah' => 'MK002',
-                'nama_matakuliah' => 'Basis Data',
-                'sks' => 4,
-                'created_at' => now(),
-                'updated_at' => now()
             ]
         ];
 
